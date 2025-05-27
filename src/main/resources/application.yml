@@ -2,11 +2,14 @@ spring:
   application:
     name: eureka-server
 
+server:
+  port: ${PORT:8761}  # Use PORT env variable if set, otherwise default to 8761
+
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
 
-logging:
-  level:
-    org.springframework: INFO
+  instance:
+    hostname: ${RENDER_EXTERNAL_URL:localhost}  # Use RENDER_EXTERNAL_URL if set, else localhost
+    prefer-ip-address: true
