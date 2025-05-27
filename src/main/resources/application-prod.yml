@@ -1,0 +1,9 @@
+server:
+  port: ${PORT} # Render assigns a port
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ${RENDER_EXTERNAL_URL}
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL}
