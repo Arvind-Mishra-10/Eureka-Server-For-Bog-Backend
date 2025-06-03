@@ -11,5 +11,5 @@ eureka:
     fetch-registry: false
 
   instance:
-    hostname: ${RENDER_EXTERNAL_URL:localhost}  # Use RENDER_EXTERNAL_URL if set, else localhost
+    hostname: ${RAILWAY_EXTERNAL_URL:localhost}  # Use RENDER_EXTERNAL_URL if set, else localhost
     prefer-ip-address: true
