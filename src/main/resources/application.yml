@@ -3,7 +3,7 @@ spring:
     name: eureka-server
 
 server:
-  port: ${PORT:8080}  # Use PORT env variable if set, otherwise default to 8761
+  port: ${PORT:8761}  # Use PORT env variable if set, otherwise default to 8761
 
 eureka:
   client:
